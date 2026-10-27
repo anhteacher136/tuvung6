@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Luyện tự luận Tiếng Anh 11 – Giữa kỳ I</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Patrick+Hand&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --paper:#FDFDF8; --sheet:#FFFFFF; --rule:rgba(110,120,215,.13); --rule2:rgba(110,120,215,.26);
+  --margin:rgba(210,31,60,.38); --ink:#1C3D8F; --text:#1D2030; --muted:#5B6072;
+  --red:#D21F3C; --redsoft:rgba(210,31,60,.08); --ok:#17784A; --oksoft:rgba(23,120,74,.09);
+  --hl:#FFE45C; --hltext:#1D2030; --line:#D9DCE8; --field:#FFFFFF;
+  --hand:'Patrick Hand','Comic Sans MS',cursive; --sans:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --paper:#151927; --sheet:#1B2033; --rule:rgba(140,160,255,.07); --rule2:rgba(140,160,255,.14);
+  --margin:rgba(255,107,125,.35); --ink:#9DB4FF; --text:#E8EAF2; --muted:#A5AABD;
+  --red:#FF6B7D; --redsoft:rgba(255,107,125,.12); --ok:#5BD49A; --oksoft:rgba(91,212,154,.12);
+  --hl:#E9C700; --hltext:#151927; --line:#2E3550; --field:#141828; color-scheme:dark; }}
+:root[data-theme="dark"]{
+  --paper:#151927; --sheet:#1B2033; --rule:rgba(140,160,255,.07); --rule2:rgba(140,160,255,.14);
+  --margin:rgba(255,107,125,.35); --ink:#9DB4FF; --text:#E8EAF2; --muted:#A5AABD;
+  --red:#FF6B7D; --redsoft:rgba(255,107,125,.12); --ok:#5BD49A; --oksoft:rgba(91,212,154,.12);
+  --hl:#E9C700; --hltext:#151927; --line:#2E3550; --field:#141828; color-scheme:dark; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;font-family:var(--sans);color:var(--text);font-size:17px;line-height:1.55;
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--rule2) 1px,transparent 1px),linear-gradient(90deg,var(--rule2) 1px,transparent 1px),
+    linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
+  background-size:32px 32px,32px 32px,8px 8px,8px 8px;}
+.wrap{max-width:680px;margin:0 auto;padding:20px 16px 48px}
+.sheet{background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:22px 20px 22px 44px;position:relative;box-shadow:0 1px 0 var(--line),0 10px 30px -18px rgba(20,30,80,.35)}
+.sheet::before{content:"";position:absolute;top:0;bottom:0;left:28px;width:2px;background:var(--margin)}
+h1{font-size:1.55rem;line-height:1.25;margin:0 0 6px;color:var(--ink);font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.15rem;margin:0 0 4px;color:var(--ink)}
+p{margin:0 0 12px}
+.muted{color:var(--muted);font-size:.93rem}
+.hand{font-family:var(--hand)}
+label{display:block;font-weight:600;font-size:.95rem;margin:14px 0 6px}
+input[type=text],textarea{width:100%;font:inherit;font-size:1.05rem;color:var(--text);background:var(--field);border:1.5px solid var(--line);border-radius:6px;padding:11px 12px;outline:none;transition:border-color .15s}
+textarea{resize:vertical;min-height:84px;line-height:1.45}
+input:focus,textarea:focus{border-color:var(--ink)}
+button{font:inherit;cursor:pointer;border-radius:6px;border:1.5px solid transparent;padding:11px 18px;font-weight:600;font-size:1rem}
+button:focus-visible,a:focus-visible,.round:focus-visible{outline:3px solid var(--hl);outline-offset:2px}
+.btn{background:var(--ink);color:var(--sheet)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-red{background:var(--red);color:#fff}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.err{color:var(--red);font-size:.92rem;margin-top:8px;min-height:1.2em}
+.hidden{display:none!important}
+/* map */
+.who{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.who b{font-family:var(--hand);font-size:1.45rem;color:var(--ink);font-weight:400}
+.rounds{list-style:none;margin:8px 0 0;padding:0}
+.round{display:grid;grid-template-columns:2.2rem 1fr auto;gap:10px;align-items:center;padding:12px 4px;border-bottom:1px dashed var(--line);cursor:pointer;border-radius:4px}
+.round:hover{background:var(--redsoft)}
+.round .num{font-family:var(--hand);font-size:1.5rem;color:var(--muted);text-align:center}
+.round .ttl{font-weight:600}
+.round .sub{font-size:.85rem;color:var(--muted)}
+.round .best{font-family:var(--hand);font-size:1.55rem;color:var(--red);min-width:3.2rem;text-align:right;line-height:1}
+.round .best.none{color:var(--muted);font-size:1rem;font-family:var(--sans)}
+.round.challenge .ttl{color:var(--red)}
+/* play */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);padding:10px 0 8px;margin-bottom:10px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.tb{display:flex;align-items:center;gap:12px}
+.track{flex:1;height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.track i{display:block;height:100%;width:0;background:var(--ink);transition:width .35s ease}
+.pts{font-family:var(--hand);font-size:1.35rem;color:var(--ink);min-width:4.2rem;text-align:right}
+.combo{font-weight:700;font-size:.85rem;background:var(--hl);color:var(--hltext);padding:2px 8px;border-radius:3px;transform:rotate(-2deg);display:inline-block}
+.qhead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:8px}
+.qno{font-family:var(--hand);font-size:1.6rem;color:var(--red);line-height:1}
+.task{font-size:.9rem;color:var(--muted)}
+.prompt{font-size:1.12rem;margin:4px 0 12px;padding-right:56px}
+.prompt .blank{display:inline-block;min-width:4.5em;border-bottom:2px solid var(--ink);margin:0 2px;height:1.1em;vertical-align:-2px}
+.prompt .word{font-weight:700;color:var(--ink)}
+.cue{display:inline-block;background:var(--hl);color:var(--hltext);font-weight:600;padding:2px 8px;border-radius:3px;font-size:.95rem;margin:2px 6px 8px 0}
+.mark{position:relative}
+.stamp{position:absolute;right:-6px;top:-8px;width:64px;height:64px;pointer-events:none}
+.stamp path{fill:none;stroke:var(--red);stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:140;stroke-dashoffset:140;animation:draw .45s ease-out forwards}
+.stamp.ok path{stroke:var(--ok)}
+@keyframes draw{to{stroke-dashoffset:0}}
+.shake{animation:shake .35s}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.feedback{margin-top:14px;border-left:4px solid var(--ink);padding:10px 12px;border-radius:0 6px 6px 0;background:var(--redsoft)}
+.feedback.good{border-color:var(--ok);background:var(--oksoft)}
+.feedback.bad{border-color:var(--red)}
+.feedback .head{font-weight:700;margin-bottom:4px}
+.feedback .good-t{color:var(--ok)} .feedback .bad-t{color:var(--red)}
+.formula{font-weight:600;color:var(--ink);background:var(--sheet);border:1px dashed var(--ink);border-radius:4px;padding:6px 9px;margin:8px 0;font-size:.95rem}
+.answer{font-family:var(--hand);font-size:1.3rem;color:var(--red);line-height:1.3}
+.yours{text-decoration:line-through;text-decoration-color:var(--red);color:var(--muted)}
+.actions{margin-top:14px}
+.hint-box{margin-top:12px}
+/* result */
+.grade{position:relative;width:170px;height:130px;margin:6px auto 4px}
+.grade svg{position:absolute;inset:0;width:100%;height:100%}
+.grade svg path{fill:none;stroke:var(--red);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:520;stroke-dashoffset:520;animation:draw 1s .2s ease-out forwards}
+.grade .val{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--hand);font-size:4rem;color:var(--red);line-height:1}
+.comment{text-align:center;font-family:var(--hand);font-size:1.45rem;color:var(--red);margin:0 0 14px}
+.stats{display:flex;justify-content:center;gap:22px;margin:0 0 16px;flex-wrap:wrap}
+.stats div{text-align:center}.stats b{display:block;font-size:1.3rem;color:var(--ink)}
+.stats span{font-size:.82rem;color:var(--muted)}
+.review{list-style:none;padding:0;margin:14px 0 0}
+.review li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.review .r-q{color:var(--muted);font-size:.88rem}
+.review .tick{font-family:var(--hand);font-size:1.3rem;margin-right:6px}
+.send{margin-top:18px;border-top:2px solid var(--line);padding-top:14px}
+.send textarea{font-size:.85rem;min-height:140px;margin-top:8px}
+.foot{text-align:center;margin-top:18px;font-size:.85rem;color:var(--muted)}
+.theme{background:transparent;border:1px solid var(--line);color:var(--muted);padding:6px 10px;font-size:.85rem;font-weight:500}
+@media (max-width:480px){.sheet{padding:18px 14px 18px 34px}.sheet::before{left:20px}body{font-size:16px}.stamp{right:-4px;width:52px;height:52px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.stamp path,.grade svg path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- START -->
+<section id="s-start" class="sheet">
+  <h1>Luyện tự luận Tiếng Anh 11</h1>
+  <p class="muted">Ôn thi giữa học kỳ I, Unit 1–2. Gồm 80 câu chia thành 9 bài ngắn: từ loại, nối câu, chia động từ và viết lại câu. Làm sai được thử lại một lần, sau đó xem đáp án kèm công thức.</p>
+  <label for="inName">Họ và tên</label>
+  <input id="inName" type="text" autocomplete="name" placeholder="Ví dụ: Lê Thành Nhân">
+  <label for="inClass">Lớp</label>
+  <input id="inClass" type="text" placeholder="Ví dụ: 11B5">
+  <div class="err" id="startErr"></div>
+  <div class="row" style="margin-top:8px"><button class="btn" id="btnStart">Vào làm bài</button></div>
+</section>
+
+<!-- MAP -->
+<section id="s-map" class="sheet hidden">
+  <div class="who"><div><span class="muted">Học sinh</span><br><b id="mapName"></b> <span class="muted" id="mapClass"></span></div>
+  <button class="btn-ghost" id="btnRename" style="padding:6px 12px;font-size:.88rem">Đổi tên</button></div>
+  <h2>Chọn bài để làm</h2>
+  <p class="muted">Điểm bên phải là điểm cao nhất của em ở mỗi bài.</p>
+  <ul class="rounds" id="roundList"></ul>
+  <div class="send">
+    <button class="btn-ghost" id="btnAllReport">Gửi bảng điểm tất cả các bài cho cô</button>
+  </div>
+</section>
+
+<!-- PLAY -->
+<section id="s-play" class="hidden">
+  <div class="topbar"><div class="tb">
+    <button class="btn-ghost" id="btnQuit" style="padding:6px 10px;font-size:.85rem">Thoát</button>
+    <div class="track" aria-hidden="true"><i id="bar"></i></div>
+    <div class="pts" id="pts">0 đ</div>
+  </div></div>
+  <div class="sheet">
+    <div class="qhead"><div><span class="qno" id="qno"></span> <span class="task" id="task"></span></div><span id="comboWrap"></span></div>
+    <div class="mark">
+      <div class="prompt" id="prompt"></div>
+      <div id="cues"></div>
+      <div id="inputWrap"></div>
+      <svg class="stamp hidden" id="stamp" viewBox="0 0 64 64" aria-hidden="true"></svg>
+    </div>
+    <div class="err" id="tryMsg" role="status"></div>
+    <div class="row actions" id="actCheck">
+      <button class="btn" id="btnCheck">Kiểm tra</button>
+      <button class="btn-ghost" id="btnHint">Xem gợi ý công thức</button>
+    </div>
+    <div class="hint-box hidden" id="hintBox"><div class="formula" id="hintF"></div><div class="muted">Dùng gợi ý thì câu này chỉ được nửa số điểm.</div></div>
+    <div id="fb"></div>
+    <div class="row actions hidden" id="actNext"><button class="btn" id="btnNext">Câu tiếp theo</button></div>
+  </div>
+</section>
+
+<!-- RESULT -->
+<section id="s-result" class="sheet hidden">
+  <h2 id="resTitle" style="text-align:center"></h2>
+  <div class="grade"><svg viewBox="0 0 170 130" aria-hidden="true"><path d="M150 40 C 135 10, 40 6, 18 45 C 2 78, 40 122, 95 120 C 150 118, 170 80, 152 46 C 146 36, 132 26, 118 22"/></svg><div class="val" id="resGrade"></div></div>
+  <p class="comment" id="resComment"></p>
+  <div class="stats">
+    <div><b id="stRight"></b><span>đúng ngay lần đầu</span></div>
+    <div><b id="stSecond"></b><span>đúng lần hai</span></div>
+    <div><b id="stWrong"></b><span>chưa đúng</span></div>
+    <div><b id="stPts"></b><span>điểm thưởng</span></div>
+  </div>
+  <div class="row" style="justify-content:center">
+    <button class="btn" id="btnRetryWrong">Làm lại các câu sai</button>
+    <button class="btn-ghost" id="btnBack">Chọn bài khác</button>
+  </div>
+  <div class="send">
+    <h2>Nộp bài cho cô</h2>
+    <p class="muted">Bấm nút dưới để mở email đã điền sẵn kết quả, rồi bấm Gửi. Nếu máy không mở được email, bấm "Sao chép kết quả" và gửi qua Zalo cho cô.</p>
+    <div class="row">
+      <a class="btn btn-red" id="mailLink" href="#" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;padding:11px 18px;border-radius:6px">Gửi kết quả qua email</a>
+      <button class="btn-ghost" id="btnCopy">Sao chép kết quả</button>
+    </div>
+    <div class="err" id="copyMsg" style="color:var(--ok)"></div>
+    <textarea id="resText" readonly aria-label="Kết quả bài làm"></textarea>
+  </div>
+  <h2 style="margin-top:20px">Xem lại bài làm</h2>
+  <ul class="review" id="review"></ul>
+</section>
+
+<div class="foot">Tiếng Anh Cô Ánh <button class="theme" id="btnTheme">Đổi giao diện sáng/tối</button></div>
+</div>
+
+<script>
+const DATA = [{"id": "W1", "t": "W", "n": 1, "q": "Eating plenty of fruit and vegetables helps you stay _______. (HEALTH)", "pre": "", "acc": ["healthy"], "ans": "healthy", "f": "stay / keep / become / seem / look / feel + ADJ", "e": "Sau động từ nối \"stay\" cần tính từ. health (n) → healthy (adj): khỏe mạnh."}, {"id": "W2", "t": "W", "n": 2, "q": "My grandparents have always lived _______ by eating home-cooked food. (HEALTH)", "pre": "", "acc": ["healthily"], "ans": "healthily", "f": "S + V(thường) + ADV", "e": "\"lived\" là động từ thường → cần trạng từ bổ nghĩa. healthy → healthily (một cách lành mạnh)."}, {"id": "W3", "t": "W", "n": 3, "q": "Swimming can help _______ your muscles and bones. (STRONG)", "pre": "", "acc": ["strengthen"], "ans": "strengthen", "f": "help (+ O) + V(nguyên mẫu) / to V", "e": "Sau \"help\" cần động từ. strong (adj) → strengthen (v): làm cho khỏe, chắc hơn (hậu tố -en tạo động từ)."}, {"id": "W4", "t": "W", "n": 4, "q": "Weightlifting requires a lot of physical _______. (STRONG)", "pre": "", "acc": ["strength"], "ans": "strength", "f": "ADJ + NOUN", "e": "Sau tính từ \"physical\" cần danh từ. strong → strength (n): sức mạnh, sức lực."}, {"id": "W5", "t": "W", "n": 5, "q": "You should consult a doctor before taking any _______. (MEDICINE)", "pre": "", "acc": ["medicine", "medication", "medicines", "medications"], "ans": "medicine / medication", "f": "any + NOUN", "e": "Sau \"any\" cần danh từ. taking medicine = uống thuốc. medicine/medication đều đúng."}, {"id": "W6", "t": "W", "n": 6, "q": "Students must have a _______ check-up before joining the school football team. (MEDICINE)", "pre": "", "acc": ["medical"], "ans": "medical", "f": "a + ADJ + NOUN", "e": "Đứng trước danh từ \"check-up\" cần tính từ → medical check-up (khám sức khỏe)."}, {"id": "W7", "t": "W", "n": 7, "q": "Children are naturally _______ about the world around them. (CURIOSITY)", "pre": "", "acc": ["curious"], "ans": "curious", "f": "be + (ADV) + ADJ;  be curious about sth", "e": "Sau \"are naturally\" cần tính từ. curiosity (n) → curious (adj): tò mò. be curious about = tò mò về."}, {"id": "W8", "t": "W", "n": 8, "q": "The little boy looked _______ at the strange machine. (CURIOSITY)", "pre": "", "acc": ["curiously"], "ans": "curiously", "f": "look (nhìn – hành động) + ADV;  look (trông có vẻ) + ADJ", "e": "\"looked at the strange machine\" = nhìn (hành động) → cần trạng từ: curiously (một cách tò mò)."}, {"id": "W9", "t": "W", "n": 9, "q": "Teenagers should learn to take _______ for their own actions. (RESPONSIBLE)", "pre": "", "acc": ["responsibility"], "ans": "responsibility", "f": "take responsibility for sth", "e": "Cụm cố định take responsibility for = chịu trách nhiệm về → danh từ responsibility."}, {"id": "W10", "t": "W", "n": 10, "q": "Parents want their children to behave _______ when they go out with friends. (RESPONSIBLE)", "pre": "", "acc": ["responsibly"], "ans": "responsibly", "f": "behave + ADV", "e": "Bổ nghĩa cho động từ \"behave\" cần trạng từ: responsibly (có trách nhiệm)."}, {"id": "W11", "t": "W", "n": 11, "q": "I had a big _______ with my sister about whose turn it was to do the dishes. (ARGUE)", "pre": "", "acc": ["argument"], "ans": "argument", "f": "a + ADJ + NOUN;  have an argument with sb", "e": "Sau \"a big\" cần danh từ. argue (v) → argument (n): cuộc cãi vã."}, {"id": "W12", "t": "W", "n": 12, "q": "My brother becomes very _______ whenever we talk about football. (ARGUE)", "pre": "", "acc": ["argumentative"], "ans": "argumentative", "f": "become + very + ADJ", "e": "Sau \"becomes very\" cần tính từ. argue → argumentative (adj): hay cãi, thích tranh luận."}, {"id": "W13", "t": "W", "n": 13, "q": "Grandparents can give _______ advice to young people thanks to their life experience. (VALUE)", "pre": "", "acc": ["valuable"], "ans": "valuable", "f": "V + ADJ + NOUN", "e": "Trước danh từ \"advice\" cần tính từ. value → valuable (adj): quý giá."}, {"id": "W14", "t": "W", "n": 14, "q": "Without proper care, this old painting will soon become _______. (VALUE)", "pre": "", "acc": ["valueless", "worthless"], "ans": "valueless / worthless", "f": "become + ADJ", "e": "Sau \"become\" cần tính từ; \"không được bảo quản sẽ mất giá trị\" → valueless (= worthless). Lưu ý: invaluable = vô giá (nghĩa tích cực) → sai nghĩa."}, {"id": "W15", "t": "W", "n": 15, "q": "Teenagers today often have very _______ opinions from their parents. (DIFFER)", "pre": "", "acc": ["different"], "ans": "different", "f": "very + ADJ + NOUN;  different from", "e": "Sau \"very\", trước danh từ \"opinions\" cần tính từ. differ (v) → different (adj). different from = khác với."}, {"id": "W16", "t": "W", "n": 16, "q": "He seemed completely _______ to his parents' advice and did whatever he wanted. (DIFFER)", "pre": "", "acc": ["indifferent"], "ans": "indifferent", "f": "seem + (ADV) + ADJ;  be indifferent to sth", "e": "\"phớt lờ lời khuyên, làm điều mình thích\" → indifferent to (thờ ơ, không quan tâm)."}, {"id": "W17", "t": "W", "n": 17, "q": "Our school needs more _______ coaches for the basketball team. (EXPERIENCE)", "pre": "", "acc": ["experienced"], "ans": "experienced", "f": "more + ADJ + NOUN", "e": "Trước danh từ \"coaches\" cần tính từ. experience → experienced (giàu kinh nghiệm)."}, {"id": "W18", "t": "W", "n": 18, "q": "The young driver was too _______ to drive in such heavy traffic. (EXPERIENCE)", "pre": "", "acc": ["inexperienced"], "ans": "inexperienced", "f": "too + ADJ + to V (quá… đến nỗi không thể)", "e": "Tài xế trẻ, giao thông đông → \"quá thiếu kinh nghiệm\" → tiền tố phủ định in-: inexperienced."}, {"id": "W19", "t": "W", "n": 19, "q": "Spending too much time on video games can make children _______; they don't want to meet other people. (SOCIETY)", "pre": "", "acc": ["unsociable", "antisocial", "anti-social"], "ans": "unsociable / antisocial", "f": "make + O + ADJ", "e": "Sau \"make children\" cần tính từ; \"không muốn gặp người khác\" mang nghĩa phủ định → unsociable (không thích giao du)."}, {"id": "W20", "t": "W", "n": 20, "q": "My sister is very _______; she makes friends easily wherever she goes. (SOCIETY)", "pre": "", "acc": ["sociable"], "ans": "sociable", "f": "be + very + ADJ", "e": "Sau \"is very\" cần tính từ; \"kết bạn dễ dàng\" → sociable (hòa đồng). Phân biệt: social = thuộc về xã hội."}, {"id": "R1", "t": "R", "n": 1, "q": "Tom finished his homework. He went to bed. (Having …)", "pre": "", "acc": ["Having finished his homework, Tom went to bed."], "ans": "Having finished his homework, Tom went to bed.", "f": "Having + V3/ed …, S + V …  (hành động xảy ra TRƯỚC, chủ động, cùng chủ ngữ)", "e": "\"finished homework\" xảy ra trước \"went to bed\" → Having + V3. Bỏ chủ ngữ ở vế đầu, giữ \"Tom\" ở vế sau."}, {"id": "R2", "t": "R", "n": 2, "q": "The doctor was worried about my health. He advised me to do more exercise. (Worried …)", "pre": "", "acc": ["Worried about my health, the doctor advised me to do more exercise."], "ans": "Worried about my health, the doctor advised me to do more exercise.", "f": "V3/ed …, S + V …  (be + V3/adj → bỏ be, giữ V3)", "e": "\"The doctor was worried\" → bỏ \"The doctor was\" → Worried about my health, … Chủ ngữ vế sau phải là \"the doctor\"."}, {"id": "R3", "t": "R", "n": 3, "q": "Lan opened the fridge. She found some fresh vegetables. (Opening …)", "pre": "", "acc": ["Opening the fridge, Lan found some fresh vegetables."], "ans": "Opening the fridge, Lan found some fresh vegetables.", "f": "V-ing …, S + V …  (hai hành động chủ động, liên tiếp, cùng chủ ngữ)", "e": "\"Lan opened\" → bỏ chủ ngữ, đổi động từ thành V-ing: Opening the fridge, …"}, {"id": "R4", "t": "R", "n": 4, "q": "The boy was punished by his father. He stayed in his room all evening. (Punished …)", "pre": "", "acc": ["Punished by his father, the boy stayed in his room all evening."], "ans": "Punished by his father, the boy stayed in his room all evening.", "f": "V3/ed …, S + V …  (nghĩa bị động)", "e": "\"The boy was punished\" (bị động) → bỏ \"The boy was\" → Punished by his father, the boy…"}, {"id": "R5", "t": "R", "n": 5, "q": "My parents grew up in a small village. They have very traditional values. (Having …)", "pre": "", "acc": ["Having grown up in a small village, my parents have very traditional values."], "ans": "Having grown up in a small village, my parents have very traditional values.", "f": "Having + V3/ed …, S + V …", "e": "\"grew up\" xảy ra trước, là nguyên nhân của tính cách hiện tại → Having grown up (grow – grew – grown)."}, {"id": "R6", "t": "R", "n": 6, "q": "Minh felt tired after the match. He decided to go to bed early. (Feeling …)", "pre": "", "acc": ["Feeling tired after the match, Minh decided to go to bed early."], "ans": "Feeling tired after the match, Minh decided to go to bed early.", "f": "V-ing …, S + V …  (chủ động – chỉ nguyên nhân)", "e": "\"Minh felt tired\" → Feeling tired (vì cảm thấy mệt), Minh decided…"}, {"id": "R7", "t": "R", "n": 7, "q": "This book was written for teenagers. It gives useful tips on healthy eating. (Written …)", "pre": "", "acc": ["Written for teenagers, this book gives useful tips on healthy eating."], "ans": "Written for teenagers, this book gives useful tips on healthy eating.", "f": "V3/ed …, S + V …  (nghĩa bị động)", "e": "\"This book was written\" → bỏ \"This book was\" → Written for teenagers, this book…"}, {"id": "R8", "t": "R", "n": 8, "q": "My sister saw the fast food advertisement. She wanted to eat a burger. (Seeing …)", "pre": "", "acc": ["Seeing the fast food advertisement, my sister wanted to eat a burger."], "ans": "Seeing the fast food advertisement, my sister wanted to eat a burger.", "f": "V-ing …, S + V …", "e": "\"My sister saw\" (chủ động) → Seeing the fast food advertisement, my sister…"}, {"id": "R9", "t": "R", "n": 9, "q": "The children were raised by their grandparents. They learned many traditional values. (Raised …)", "pre": "", "acc": ["Raised by their grandparents, the children learned many traditional values."], "ans": "Raised by their grandparents, the children learned many traditional values.", "f": "V3/ed …, S + V …  (nghĩa bị động)", "e": "\"The children were raised\" → Raised by their grandparents, the children…"}, {"id": "R10", "t": "R", "n": 10, "q": "Nam had argued with his parents. He felt sad all day. (Having …)", "pre": "", "acc": ["Having argued with his parents, Nam felt sad all day."], "ans": "Having argued with his parents, Nam felt sad all day.", "f": "Having + V3/ed …, S + V …  (had + V3 → Having + V3)", "e": "Quá khứ hoàn thành \"had argued\" diễn tả việc xảy ra trước → Having argued…"}, {"id": "R11", "t": "R", "n": 11, "q": "Ms Hoa is a nutritionist. She gives talks at our school every month. (who)", "pre": "", "acc": ["Ms Hoa, who gives talks at our school every month, is a nutritionist.", "Ms Hoa is a nutritionist who gives talks at our school every month."], "ans": "Ms Hoa, who gives talks at our school every month, is a nutritionist.  (Hoặc: Ms Hoa is a nutritionist who gives talks at our school every month.)", "f": "N(người), who + V …, V …  (who thay cho chủ ngữ chỉ người)", "e": "\"She\" = Ms Hoa → who. Ms Hoa là tên riêng → mệnh đề quan hệ không xác định, đặt giữa hai dấu phẩy."}, {"id": "R12", "t": "R", "n": 12, "q": "This is the gym. My father works out there every weekend. (where)", "pre": "", "acc": ["This is the gym where my father works out every weekend.", "This is the gym in which my father works out every weekend.", "This is the gym which my father works out in every weekend.", "This is the gym that my father works out in every weekend."], "ans": "This is the gym where my father works out every weekend.", "f": "N(nơi chốn) + where + S + V  (where = there / in/at which)", "e": "\"there\" = the gym → where. Bỏ \"there\" ở câu sau. = This is the gym (which) my father works out at…"}, {"id": "R13", "t": "R", "n": 13, "q": "I have a friend. Her parents are very strict. (whose)", "pre": "", "acc": ["I have a friend whose parents are very strict."], "ans": "I have a friend whose parents are very strict.", "f": "N + whose + N + V  (whose thay cho his/her/its/their)", "e": "\"Her parents\" → whose parents. Sau whose luôn là danh từ."}, {"id": "R14", "t": "R", "n": 14, "q": "Brown rice is a healthy food. It contains a lot of fibre. (which)", "pre": "", "acc": ["Brown rice, which contains a lot of fibre, is a healthy food.", "Brown rice is a healthy food which contains a lot of fibre.", "Brown rice is a healthy food that contains a lot of fibre.", "Brown rice is a healthy food, which contains a lot of fibre."], "ans": "Brown rice, which contains a lot of fibre, is a healthy food.  (Hoặc: Brown rice is a healthy food which contains a lot of fibre.)", "f": "N(vật), which + V …, V …", "e": "\"It\" = brown rice → which. Brown rice là danh từ đã xác định → có thể dùng dấu phẩy."}, {"id": "R15", "t": "R", "n": 15, "q": "I still remember the day. My family moved to Ho Chi Minh City on that day. (when)", "pre": "", "acc": ["I still remember the day when my family moved to Ho Chi Minh City.", "I still remember the day on which my family moved to Ho Chi Minh City.", "I still remember the day my family moved to Ho Chi Minh City."], "ans": "I still remember the day when my family moved to Ho Chi Minh City.", "f": "N(thời gian) + when + S + V  (when = on/in/at which)", "e": "\"on that day\" → when (= on which). Bỏ \"on that day\" ở câu sau."}, {"id": "R16", "t": "R", "n": 16, "q": "My grandfather is 90 years old. He still goes jogging every morning. (who)", "pre": "", "acc": ["My grandfather, who is 90 years old, still goes jogging every morning.", "My grandfather, who still goes jogging every morning, is 90 years old."], "ans": "My grandfather, who is 90 years old, still goes jogging every morning.", "f": "N(người), who + V …, V …", "e": "\"He\" = my grandfather → who. \"My grandfather\" đã xác định (chỉ có một) → dùng dấu phẩy."}, {"id": "R17", "t": "R", "n": 17, "q": "The doctor gave me some advice. I found it very useful. (which)", "pre": "", "acc": ["The doctor gave me some advice which I found very useful.", "The doctor gave me some advice, which I found very useful.", "The doctor gave me some advice that I found very useful.", "The doctor gave me some advice I found very useful."], "ans": "The doctor gave me some advice which I found very useful.  (Hoặc: …some advice, which I found very useful.)", "f": "N(vật) + which/that + S + V  (which thay cho tân ngữ)", "e": "\"it\" (tân ngữ) = the advice → which. Bỏ \"it\" ở câu sau (không viết \"which I found it\")."}, {"id": "R18", "t": "R", "n": 18, "q": "Mr Nam is our PE teacher. His son is a famous footballer. (whose)", "pre": "", "acc": ["Mr Nam, whose son is a famous footballer, is our PE teacher."], "ans": "Mr Nam, whose son is a famous footballer, is our PE teacher.", "f": "N, whose + N + V …, V …", "e": "\"His son\" → whose son. Mr Nam là tên riêng → dùng dấu phẩy."}, {"id": "R19", "t": "R", "n": 19, "q": "Da Lat is a beautiful city. My grandparents live there. (where)", "pre": "", "acc": ["Da Lat, where my grandparents live, is a beautiful city.", "Da Lat is a beautiful city where my grandparents live.", "Da Lat is a beautiful city in which my grandparents live."], "ans": "Da Lat, where my grandparents live, is a beautiful city.  (Hoặc: Da Lat is a beautiful city where my grandparents live.)", "f": "N(nơi chốn), where + S + V …, V …", "e": "\"there\" = Da Lat → where. Tên riêng → mệnh đề không xác định có dấu phẩy."}, {"id": "R20", "t": "R", "n": 20, "q": "Generation Z are young people. They were born between 1997 and 2012. (who)", "pre": "", "acc": ["Generation Z are young people who were born between 1997 and 2012.", "Generation Z are young people born between 1997 and 2012.", "Generation Z are young people that were born between 1997 and 2012."], "ans": "Generation Z are young people who were born between 1997 and 2012.", "f": "N(người) + who + V …", "e": "\"They\" = young people → who. Có thể rút gọn: … young people born between 1997 and 2012."}, {"id": "V1", "t": "V", "n": 1, "q": "My family (move) _______ to Binh Duong in 2020.", "pre": "", "acc": ["moved"], "ans": "moved", "f": "QKĐ: S + V2/ed  (dấu hiệu: in + năm quá khứ)", "e": "\"in 2020\" là mốc quá khứ → quá khứ đơn: moved."}, {"id": "V2", "t": "V", "n": 2, "q": "I (not eat) _______ any fast food last week.", "pre": "", "acc": ["didn't eat"], "ans": "didn't eat", "f": "QKĐ phủ định: S + didn't + V  (dấu hiệu: last week)", "e": "\"last week\" → quá khứ đơn phủ định: didn't eat."}, {"id": "V3", "t": "V", "n": 3, "q": "When _______ you (start) _______ doing yoga?", "pre": "", "acc": ["did start"], "ans": "did … start", "f": "When + did + S + V?", "e": "Câu hỏi When hỏi thời điểm trong quá khứ → luôn dùng quá khứ đơn (không dùng hiện tại hoàn thành)."}, {"id": "V4", "t": "V", "n": 4, "q": "Two years ago, my grandfather (give up) _______ smoking.", "pre": "", "acc": ["gave up"], "ans": "gave up", "f": "QKĐ: S + V2/ed  (dấu hiệu: … ago)", "e": "\"Two years ago\" → quá khứ đơn. give up – gave up – given up."}, {"id": "V5", "t": "V", "n": 5, "q": "Yesterday Mai (have) _______ a fever, so she stayed at home.", "pre": "", "acc": ["had"], "ans": "had", "f": "QKĐ: S + V2/ed  (dấu hiệu: yesterday)", "e": "\"Yesterday\" và vế sau \"stayed\" → quá khứ đơn. have – had."}, {"id": "V6", "t": "V", "n": 6, "q": "My mother (cook) _______ a healthy dinner for us last night.", "pre": "", "acc": ["cooked"], "ans": "cooked", "f": "QKĐ: S + V2/ed  (dấu hiệu: last night)", "e": "\"last night\" → quá khứ đơn: cooked."}, {"id": "V7", "t": "V", "n": 7, "q": "You should (drink) _______ at least eight glasses of water a day.", "pre": "", "acc": ["drink"], "ans": "drink", "f": "should + V(nguyên mẫu)", "e": "Sau động từ khuyết thiếu should dùng động từ nguyên mẫu không \"to\"."}, {"id": "V8", "t": "V", "n": 8, "q": "Teenagers must (get) _______ enough sleep to stay healthy.", "pre": "", "acc": ["get"], "ans": "get", "f": "must + V(nguyên mẫu)", "e": "Sau must dùng động từ nguyên mẫu không \"to\"."}, {"id": "V9", "t": "V", "n": 9, "q": "My parents don't allow me (stay) _______ out after 10 p.m.", "pre": "", "acc": ["to stay"], "ans": "to stay", "f": "allow + O + to V", "e": "allow somebody to do something = cho phép ai làm gì."}, {"id": "V10", "t": "V", "n": 10, "q": "You should avoid (eat) _______ too much sugar.", "pre": "", "acc": ["eating"], "ans": "eating", "f": "avoid + V-ing", "e": "avoid luôn theo sau bởi V-ing."}, {"id": "V11", "t": "V", "n": 11, "q": "Grandparents often enjoy (tell) _______ stories about the past.", "pre": "", "acc": ["telling"], "ans": "telling", "f": "enjoy + V-ing", "e": "enjoy luôn theo sau bởi V-ing."}, {"id": "V12", "t": "V", "n": 12, "q": "My father used to (smoke) _______, but he quit last year.", "pre": "", "acc": ["smoke"], "ans": "smoke", "f": "used to + V(nguyên mẫu)  (đã từng – nay không còn)", "e": "used to + V diễn tả thói quen trong quá khứ. Phân biệt: be used to + V-ing = quen với."}, {"id": "V13", "t": "V", "n": 13, "q": "My parents want me (become) _______ a doctor.", "pre": "", "acc": ["to become"], "ans": "to become", "f": "want + O + to V", "e": "want somebody to do something = muốn ai làm gì."}, {"id": "V14", "t": "V", "n": 14, "q": "Doctors advise people (do) _______ exercise regularly.", "pre": "", "acc": ["to do"], "ans": "to do", "f": "advise + O + to V", "e": "advise somebody to do something = khuyên ai làm gì."}, {"id": "V15", "t": "V", "n": 15, "q": "I haven't seen my cousin since she (move) _______ to Da Nang.", "pre": "", "acc": ["moved"], "ans": "moved", "f": "S + HTHT + since + S + V2/ed", "e": "Sau since là mệnh đề chỉ mốc thời gian → quá khứ đơn; mệnh đề chính \"haven't seen\" ở hiện tại hoàn thành."}, {"id": "V16", "t": "V", "n": 16, "q": "My brother (be) _______ much healthier since he started swimming.", "pre": "", "acc": ["has been"], "ans": "has been", "f": "S + have/has + V3 + since + S + V2/ed", "e": "Mệnh đề chính đi với \"since he started\" → hiện tại hoàn thành; \"My brother\" số ít → has been."}, {"id": "V17", "t": "V", "n": 17, "q": "We (know) _______ each other since we were in primary school.", "pre": "", "acc": ["have known"], "ans": "have known", "f": "S + have/has + V3 + since + mốc", "e": "\"since we were in primary school\" → hiện tại hoàn thành. know là động từ trạng thái → không chia tiếp diễn."}, {"id": "V18", "t": "V", "n": 18, "q": "It's three years since I last (visit) _______ my grandparents in the countryside.", "pre": "", "acc": ["visited"], "ans": "visited", "f": "It's + khoảng thời gian + since + S + last + V2/ed", "e": "Cấu trúc cố định: sau \"since … last\" dùng quá khứ đơn → visited."}, {"id": "V19", "t": "V", "n": 19, "q": "My mother (not drink) _______ coffee since the doctor told her to stop.", "pre": "", "acc": ["hasn't drunk"], "ans": "hasn't drunk", "f": "S + haven't/hasn't + V3 + since + mốc", "e": "\"since the doctor told her\" → hiện tại hoàn thành phủ định. drink – drank – drunk."}, {"id": "V20", "t": "V", "n": 20, "q": "Since he (join) _______ the school basketball team, Nam has grown taller.", "pre": "", "acc": ["joined"], "ans": "joined", "f": "Since + S + V2/ed, S + have/has + V3", "e": "Mệnh đề since chỉ mốc thời gian → quá khứ đơn; mệnh đề chính \"has grown\" hiện tại hoàn thành."}, {"id": "S1", "t": "S", "n": 1, "q": "I last saw my uncle five years ago.", "pre": "I haven't", "acc": ["I haven't seen my uncle for five years."], "ans": "I haven't seen my uncle for five years.", "f": "S + last + V2 + (khoảng t/g) ago  =  S + haven't/hasn't + V3 + for + (khoảng t/g)", "e": "last saw → haven't seen; five years ago → for five years."}, {"id": "S2", "t": "S", "n": 2, "q": "My father started jogging three months ago.", "pre": "My father has", "acc": ["My father has jogged for three months.", "My father has been jogging for three months."], "ans": "My father has jogged / has been jogging for three months.", "f": "S + started + V-ing + (khoảng t/g) ago  =  S + have/has + V3 (been V-ing) + for + (khoảng t/g)", "e": "started jogging three months ago → has jogged / has been jogging for three months."}, {"id": "S3", "t": "S", "n": 3, "q": "The last time I ate sushi was in May.", "pre": "I haven't", "acc": ["I haven't eaten sushi since May."], "ans": "I haven't eaten sushi since May.", "f": "The last time + S + V2 + was + (mốc)  =  S + haven't/hasn't + V3 + since + (mốc)", "e": "\"in May\" là mốc → since May. ate → haven't eaten (eat – ate – eaten)."}, {"id": "S4", "t": "S", "n": 4, "q": "It's two years since we last visited Da Lat.", "pre": "We haven't", "acc": ["We haven't visited Da Lat for two years."], "ans": "We haven't visited Da Lat for two years.", "f": "It's + (khoảng t/g) + since + S + last + V2  =  S + haven't + V3 + for + (khoảng t/g)", "e": "two years là khoảng thời gian → for two years."}, {"id": "S5", "t": "S", "n": 5, "q": "She hasn't been to the dentist for six months.", "pre": "She last", "acc": ["She last went to the dentist six months ago.", "She last visited the dentist six months ago.", "She last saw the dentist six months ago.", "She last went to the dentist's six months ago."], "ans": "She last went to the dentist six months ago.", "f": "S + haven't/hasn't + V3 + for + (khoảng t/g)  =  S + last + V2 + (khoảng t/g) ago", "e": "Biến đổi ngược. \"has been to the dentist\" → \"went to the dentist\"; for six months → six months ago."}, {"id": "S6", "t": "S", "n": 6, "q": "We haven't talked to each other since last Monday.", "pre": "The last time", "acc": ["The last time we talked to each other was last Monday."], "ans": "The last time we talked to each other was last Monday.", "f": "S + haven't + V3 + since + (mốc)  =  The last time + S + V2 + was + (mốc)", "e": "\"since last Monday\" → was last Monday. talked ở quá khứ đơn."}, {"id": "S7", "t": "S", "n": 7, "q": "My grandparents got married fifty years ago.", "pre": "My grandparents have", "acc": ["My grandparents have been married for fifty years."], "ans": "My grandparents have been married for fifty years.", "f": "S + got married + (khoảng t/g) ago  =  S + have/has been married + for + (khoảng t/g)", "e": "\"get married\" là hành động tức thời, không dùng với for → đổi sang trạng thái \"be married\": have been married."}, {"id": "S8", "t": "S", "n": 8, "q": "It is necessary for students to wear uniforms at school. (must)", "pre": "", "acc": ["Students must wear uniforms at school.", "Students must wear uniform at school.", "Students must wear their uniforms at school."], "ans": "Students must wear uniforms at school.", "f": "It is necessary (for sb) to V  =  sb + must + V", "e": "necessary (cần thiết, bắt buộc) → must + V nguyên mẫu."}, {"id": "S9", "t": "S", "n": 9, "q": "It isn't necessary for you to bring your own lunch. (don't have to)", "pre": "", "acc": ["You don't have to bring your own lunch."], "ans": "You don't have to bring your own lunch.", "f": "It isn't necessary (for sb) to V  =  sb + don't/doesn't have to + V", "e": "không cần thiết → don't have to. Không dùng mustn't (= cấm)."}, {"id": "S10", "t": "S", "n": 10, "q": "You are not allowed to use phones during the exam. (mustn't)", "pre": "", "acc": ["You mustn't use phones during the exam.", "You mustn't use your phones during the exam.", "You mustn't use your phone during the exam.", "You mustn't use phones in the exam."], "ans": "You mustn't use phones during the exam.", "f": "be not allowed to V  =  mustn't + V", "e": "không được phép (cấm) → mustn't."}, {"id": "S11", "t": "S", "n": 11, "q": "I think it's a good idea for you to see a doctor. (should)", "pre": "", "acc": ["You should see a doctor.", "I think you should see a doctor.", "You should go to see a doctor."], "ans": "You should see a doctor.", "f": "It's a good idea (for sb) to V  =  sb + should + V", "e": "lời khuyên → should + V."}, {"id": "S12", "t": "S", "n": 12, "q": "It is obligatory for players to arrive 30 minutes before the match. (have to)", "pre": "", "acc": ["Players have to arrive 30 minutes before the match."], "ans": "Players have to arrive 30 minutes before the match.", "f": "It is obligatory (for sb) to V  =  sb + have/has to + V", "e": "obligatory = bắt buộc (do quy định) → have to. \"Players\" số nhiều → have to."}, {"id": "S13", "t": "S", "n": 13, "q": "Eating fried food every day is not a good idea. (shouldn't)", "pre": "", "acc": ["You shouldn't eat fried food every day.", "We shouldn't eat fried food every day.", "People shouldn't eat fried food every day.", "You should not eat fried food every day."], "ans": "You shouldn't eat fried food every day.", "f": "V-ing … is not a good idea  =  You shouldn't + V", "e": "\"không phải ý hay\" → lời khuyên không nên: shouldn't."}, {"id": "S14", "t": "S", "n": 14, "q": "Smoking is not permitted in the hospital. (mustn't)", "pre": "", "acc": ["You mustn't smoke in the hospital.", "We mustn't smoke in the hospital.", "People mustn't smoke in the hospital.", "You mustn't smoke in hospital."], "ans": "You mustn't smoke in the hospital.", "f": "V-ing is not permitted  =  You mustn't + V", "e": "not permitted = bị cấm → mustn't + V nguyên mẫu."}, {"id": "S15", "t": "S", "n": 15, "q": "Parents should learn how to handle conflicts with their teenage children. (deal)", "pre": "", "acc": ["Parents should learn how to deal with conflicts with their teenage children."], "ans": "Parents should learn how to deal with conflicts with their teenage children.", "f": "handle sth  =  deal with sth", "e": "deal with = giải quyết, xử lý. Nhớ có giới từ \"with\"."}, {"id": "S16", "t": "S", "n": 16, "q": "Despite the rain, the players continued training. (carried)", "pre": "", "acc": ["Despite the rain, the players carried on training."], "ans": "Despite the rain, the players carried on training.", "f": "continue + V-ing  =  carry on + V-ing", "e": "carry on = tiếp tục; carried là quá khứ (carry – carried)."}, {"id": "S17", "t": "S", "n": 17, "q": "My grandmother takes care of my little brother when my parents are at work. (looks)", "pre": "", "acc": ["My grandmother looks after my little brother when my parents are at work."], "ans": "My grandmother looks after my little brother when my parents are at work.", "f": "take care of sb  =  look after sb", "e": "look after = chăm sóc; chủ ngữ số ít → looks."}, {"id": "S18", "t": "S", "n": 18, "q": "My father stopped smoking last year. (gave)", "pre": "", "acc": ["My father gave up smoking last year."], "ans": "My father gave up smoking last year.", "f": "stop + V-ing (bỏ thói quen)  =  give up + V-ing", "e": "give up = từ bỏ; gave là quá khứ của give."}, {"id": "S19", "t": "S", "n": 19, "q": "Lan has a friendly relationship with her parents. (gets)", "pre": "", "acc": ["Lan gets on well with her parents.", "Lan gets on with her parents.", "Lan gets along well with her parents.", "Lan gets along with her parents."], "ans": "Lan gets on (well) with her parents.", "f": "have a friendly relationship with sb  =  get on / get along (well) with sb", "e": "get on well with = hòa thuận với. Chủ ngữ số ít → gets."}, {"id": "S20", "t": "S", "n": 20, "q": "I really admire my grandfather for his hard work. (look)", "pre": "", "acc": ["I really look up to my grandfather for his hard work."], "ans": "I really look up to my grandfather for his hard work.", "f": "admire sb  =  look up to sb", "e": "look up to = kính trọng, ngưỡng mộ. Trái nghĩa: look down on = coi thường."}];
+const TEACHER = "khuonganh2111@gmail.com";
+const BY = Object.fromEntries(DATA.map(d=>[d.id,d]));
+const rng=(p,a,b)=>Array.from({length:b-a+1},(_,i)=>p+(a+i));
+const ROUNDS=[
+ {id:"bai1",t:"Từ loại (câu 1–10)",s:"Điền dạng đúng của từ trong ngoặc",ids:rng("W",1,10)},
+ {id:"bai2",t:"Từ loại (câu 11–20)",s:"Điền dạng đúng của từ trong ngoặc",ids:rng("W",11,20)},
+ {id:"bai3",t:"Nối câu bằng mệnh đề phân từ",s:"V-ing, V3/ed, Having V3/ed",ids:rng("R",1,10)},
+ {id:"bai4",t:"Nối câu bằng mệnh đề quan hệ",s:"who, which, whose, where, when",ids:rng("R",11,20)},
+ {id:"bai5",t:"Chia động từ (câu 1–10)",s:"Quá khứ đơn, động từ khuyết thiếu, V-ing / to V",ids:rng("V",1,10)},
+ {id:"bai6",t:"Chia động từ (câu 11–20)",s:"V-ing / to V, hiện tại hoàn thành với since",ids:rng("V",11,20)},
+ {id:"bai7",t:"Viết lại câu: quá khứ đơn và hiện tại hoàn thành",s:"ago, for, since, the last time",ids:rng("S",1,7)},
+ {id:"bai8",t:"Viết lại câu: động từ khuyết thiếu",s:"must, have to, should, mustn't, don't have to",ids:rng("S",8,14)},
+ {id:"bai9",t:"Viết lại câu: cụm động từ",s:"deal with, carry on, look after, give up…",ids:rng("S",15,20)},
+ {id:"thuthach",t:"Thử thách tổng hợp",s:"15 câu ngẫu nhiên từ cả 9 bài",ids:null,challenge:true},
+];
+const TASK={W:"Điền dạng đúng của từ",R:"Nối hai câu thành một",V:"Chia động từ trong ngoặc",S:"Viết lại câu không đổi nghĩa"};
+const $=id=>document.getElementById(id);
+const store={get(k,d){try{const v=localStorage.getItem("ta11gk1:"+k);return v?JSON.parse(v):d}catch(e){return d}},
+  set(k,v){try{localStorage.setItem("ta11gk1:"+k,JSON.stringify(v))}catch(e){}}};
+
+// ---------- answer checking ----------
+const NUM={"2":"two","3":"three","5":"five","6":"six","10":"ten","30":"thirty","50":"fifty","90":"ninety"};
+function norm(s){
+  s=(s||"").toLowerCase().replace(/[’‘`´]/g,"'").replace(/[“”]/g,'"').replace(/…|\.\.\./g," ");
+  s=s.replace(/\bcan't\b/g,"cannot").replace(/\bwon't\b/g,"will not").replace(/n't\b/g," not")
+     .replace(/'ll\b/g," will").replace(/'ve\b/g," have").replace(/'re\b/g," are").replace(/\bi'm\b/g,"i am");
+  s=s.replace(/[.,!?;:"()]/g," ").replace(/\bfiber\b/g,"fibre").replace(/\blearnt\b/g,"learned");
+  s=s.replace(/\b(\d+)\b/g,(m)=>NUM[m]||m);
+  return s.replace(/\s+/g," ").trim();
+}
+function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let p=Array.from({length:n+1},(_,j)=>j);
+  for(let i=1;i<=m;i++){let c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+function check(item,val){
+  const v=norm(val); if(!v) return {empty:true};
+  const accs=item.acc.map(norm);
+  if(item.id==="V3") accs.push("did you start");
+  if(accs.includes(v)) return {ok:true};
+  const d=Math.min(...accs.map(a=>lev(a,v)));
+  const near=d>0 && d<=Math.max(1,Math.floor(Math.min(...accs.map(a=>a.length))*0.07));
+  return {ok:false,near};
+}
+
+// ---------- state ----------
+let profile=store.get("profile",null), best=store.get("best",{});
+let S=null; // session
+function show(id){["s-start","s-map","s-play","s-result"].forEach(x=>$(x).classList.toggle("hidden",x!==id));window.scrollTo(0,0)}
+function fmtGrade(g){return (Math.round(g*2)/2).toString().replace(".",",")}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+// ---------- start ----------
+function goMap(){
+  $("mapName").textContent=profile.name; $("mapClass").textContent="Lớp "+profile.cls;
+  const ul=$("roundList"); ul.innerHTML="";
+  ROUNDS.forEach((r,i)=>{
+    const li=document.createElement("li"); li.className="round"+(r.challenge?" challenge":""); li.tabIndex=0; li.setAttribute("role","button");
+    const b=best[r.id];
+    li.innerHTML=`<div class="num">${r.challenge?"★":i+1}</div><div><div class="ttl">${esc(r.t)}</div><div class="sub">${esc(r.s)}${r.ids?" ("+r.ids.length+" câu)":""}</div></div>
+      <div class="best ${b==null?"none":""}">${b==null?"chưa làm":fmtGrade(b)}</div>`;
+    li.onclick=()=>startRound(r); li.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();startRound(r)}};
+    ul.appendChild(li);
+  });
+  show("s-map");
+}
+$("btnStart").onclick=()=>{
+  const name=$("inName").value.trim(), cls=$("inClass").value.trim();
+  if(name.length<2){$("startErr").textContent="Em nhập họ và tên để cô biết bài của ai nhé.";$("inName").focus();return}
+  if(!cls){$("startErr").textContent="Em nhập lớp nữa nhé.";$("inClass").focus();return}
+  profile={name,cls}; store.set("profile",profile); $("startErr").textContent="";
+  const r=ROUNDS.find(x=>"#"+x.id===location.hash); r?startRound(r):goMap();
+};
+["inName","inClass"].forEach(id=>$(id).addEventListener("keydown",e=>{if(e.key==="Enter")$("btnStart").click()}));
+$("btnRename").onclick=()=>{$("inName").value=profile.name;$("inClass").value=profile.cls;show("s-start")};
+
+// ---------- play ----------
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startRound(r,onlyIds){
+  let ids=onlyIds||(r.challenge?shuffle(DATA.map(d=>d.id)).slice(0,15):r.ids);
+  S={round:r,ids,idx:0,pts:0,combo:0,res:[],retry:!!onlyIds};
+  show("s-play"); renderQ();
+}
+function parseCue(q){const m=q.match(/^(.*)\(([^()]*)\)\s*$/);return m?{body:m[1].trim(),cue:m[2].trim()}:{body:q,cue:""}}
+function renderQ(){
+  const it=BY[S.ids[S.idx]]; S.cur={it,tries:0,hint:false,done:false};
+  $("qno").textContent="Câu "+(S.idx+1)+"/"+S.ids.length; $("task").textContent=TASK[it.t];
+  $("bar").style.width=(S.idx/S.ids.length*100)+"%"; $("pts").textContent=S.pts+" đ";
+  $("comboWrap").innerHTML=S.combo>=2?`<span class="combo">Chuỗi đúng ×${S.combo}</span>`:"";
+  const {body,cue}=parseCue(it.q);
+  let html=esc(it.t==="W"?body:it.q).replace(/_{3,}/g,'<span class="blank"></span>');
+  if(it.t==="V") html=html.replace(/\(([^)]+)\)/g,'(<span class="word">$1</span>)');
+  $("prompt").innerHTML=html;
+  let cues="";
+  if(it.t==="W") cues=`<span class="cue">Từ gốc: ${esc(cue)}</span>`;
+  if(it.t==="R"||(it.t==="S"&&cue)) cues=`<span class="cue">Dùng: ${esc(cue)}</span>`;
+  if(it.t==="S"&&it.pre) cues+=`<span class="cue">Bắt đầu bằng: ${esc(it.pre)}</span>`;
+  if(it.t==="R"||it.t==="S") $("prompt").innerHTML=esc(parseCue(it.q).body);
+  $("cues").innerHTML=cues;
+  const long=it.t==="R"||it.t==="S";
+  $("inputWrap").innerHTML=long?`<textarea id="ans" rows="3" autocomplete="off" autocapitalize="sentences" spellcheck="false" aria-label="Câu trả lời"></textarea>`
+    :`<input id="ans" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Câu trả lời" placeholder="${it.id==="V3"?"Viết cả hai chỗ trống, ví dụ: did … start":"Nhập đáp án"}">`;
+  const a=$("ans"); if(it.pre) a.value=it.pre+" ";
+  a.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();S.cur.done?next():doCheck()}});
+  $("tryMsg").textContent=""; $("fb").innerHTML=""; $("stamp").classList.add("hidden");
+  $("hintBox").classList.add("hidden"); $("hintF").textContent=it.f;
+  $("actCheck").classList.remove("hidden"); $("actNext").classList.add("hidden"); $("btnHint").disabled=false;
+  setTimeout(()=>{a.focus();a.setSelectionRange(a.value.length,a.value.length)},30);
+}
+function stamp(ok){const s=$("stamp");s.classList.remove("hidden");s.classList.toggle("ok",ok);
+  s.innerHTML=ok?'<path d="M10 34 L26 50 L56 12"/>':'<path d="M14 14 L50 50 M50 14 L14 50"/>'}
+function doCheck(){
+  const c=S.cur; if(c.done) return; const val=$("ans").value; const r=check(c.it,val);
+  if(r.empty){$("tryMsg").textContent="Em chưa nhập đáp án.";return}
+  c.tries++;
+  if(r.ok){
+    const base=c.tries===1?10:5; const bonus=c.tries===1&&S.combo>=2?2:0;
+    const got=Math.round((base+bonus)/(c.hint?2:1)); S.pts+=got; S.combo=c.tries===1?S.combo+1:0;
+    finish(true,val,got);
+  } else if(c.tries===1){
+    S.combo=0; $("tryMsg").textContent=r.near?"Gần đúng rồi, em kiểm tra lại chính tả rồi thử lần nữa.":"Chưa đúng. Em còn một lần thử nữa.";
+    const w=$("inputWrap"); w.classList.remove("shake"); void w.offsetWidth; w.classList.add("shake");
+    $("comboWrap").innerHTML="";
+  } else { S.combo=0; finish(false,val,0); }
+}
+function finish(ok,val,got){
+  const c=S.cur; c.done=true; stamp(ok); $("tryMsg").textContent="";
+  S.res.push({id:c.it.id,ok,tries:c.tries,hint:c.hint,val:val.trim(),got});
+  $("actCheck").classList.add("hidden"); $("hintBox").classList.add("hidden");
+  $("ans").readOnly=true; $("pts").textContent=S.pts+" đ";
+  $("fb").innerHTML=`<div class="feedback ${ok?"good":"bad"}">
+    <div class="head ${ok?"good-t":"bad-t"}">${ok?(c.tries===1?"Chính xác! +"+got+" điểm":"Đúng ở lần thử thứ hai. +"+got+" điểm"):"Chưa đúng. Đáp án là:"}</div>
+    ${ok?"":`<div class="answer">${esc(c.it.ans)}</div>`}
+    <div class="formula">Công thức: ${esc(c.it.f)}</div>
+    <div>${esc(c.it.e)}</div></div>`;
+  $("actNext").classList.remove("hidden");
+  $("btnNext").textContent=S.idx===S.ids.length-1?"Xem điểm":"Câu tiếp theo";
+  $("btnNext").focus();
+}
+function next(){ if(S.idx<S.ids.length-1){S.idx++;renderQ()} else result(); }
+$("btnCheck").onclick=doCheck; $("btnNext").onclick=next;
+$("btnHint").onclick=()=>{S.cur.hint=true;$("hintBox").classList.remove("hidden");$("btnHint").disabled=true;$("ans").focus()};
+$("btnQuit").onclick=()=>{if(S.res.length===0||confirm("Thoát bài này? Kết quả các câu đã làm sẽ không được lưu."))goMap()};
+
+// ---------- result ----------
+function gradeOf(res){const s=res.reduce((a,r)=>a+(r.ok?(r.tries===1?1:0.5):0),0);return s/res.length*10}
+function comment(g){return g>=9?"Xuất sắc!":g>=8?"Giỏi lắm!":g>=6.5?"Khá tốt, cố thêm chút nữa":g>=5?"Đạt, em ôn lại công thức nhé":"Em làm lại các câu sai nhé"}
+function result(){
+  const res=S.res, g=gradeOf(res), gr=Math.round(g*2)/2;
+  if(!S.retry){ const k=S.round.id; if(best[k]==null||gr>best[k]){best[k]=gr;store.set("best",best)} }
+  $("resTitle").textContent=S.round.t+(S.retry?" – làm lại câu sai":"");
+  $("resGrade").textContent=fmtGrade(g); $("resComment").textContent=comment(g);
+  $("stRight").textContent=res.filter(r=>r.ok&&r.tries===1).length;
+  $("stSecond").textContent=res.filter(r=>r.ok&&r.tries===2).length;
+  $("stWrong").textContent=res.filter(r=>!r.ok).length; $("stPts").textContent=S.pts;
+  const wrong=res.filter(r=>!r.ok||r.tries>1).map(r=>r.id);
+  $("btnRetryWrong").classList.toggle("hidden",wrong.length===0);
+  $("btnRetryWrong").onclick=()=>startRound(S.round,shuffle(wrong));
+  // grade svg restart
+  const p=document.querySelector(".grade svg path"); p.style.animation="none"; void p.getBoundingClientRect(); p.style.animation="";
+  $("review").innerHTML=res.map((r,i)=>{const it=BY[r.id];
+    return `<li><span class="tick" style="color:${r.ok?"var(--ok)":"var(--red)"}">${r.ok?(r.tries===1?"✓":"✓½"):"✗"}</span><b>Câu ${i+1}.</b>
+    <div class="r-q">${esc(it.q.replace(/_{3,}/g,"____"))}</div>
+    ${r.ok?`<div>Em trả lời: ${esc(r.val)}</div>`:`<div>Em trả lời: <span class="yours">${esc(r.val||"(bỏ trống)")}</span></div><div>Đáp án: <b style="color:var(--red)">${esc(it.ans)}</b></div>`}</li>`}).join("");
+  const txt=reportText(); $("resText").value=txt;
+  $("mailLink").href=mailto(`[Anh 11 – Tự luận GK1] ${profile.name} – ${profile.cls} – ${S.round.t}: ${fmtGrade(g)} điểm`,txt);
+  $("copyMsg").textContent="";
+  show("s-result");
+}
+function reportText(){
+  const res=S.res,g=gradeOf(res); const d=new Date();
+  let t=`KẾT QUẢ LUYỆN TỰ LUẬN TIẾNG ANH 11 – GIỮA KỲ I\nHọc sinh: ${profile.name}\nLớp: ${profile.cls}\nBài: ${S.round.t}${S.retry?" (làm lại câu sai)":""}\nThời gian: ${d.toLocaleString("vi-VN")}\nĐiểm: ${fmtGrade(g)}/10 (đúng ngay ${res.filter(r=>r.ok&&r.tries===1).length}, đúng lần hai ${res.filter(r=>r.ok&&r.tries===2).length}, sai ${res.filter(r=>!r.ok).length}/${res.length} câu)\n`;
+  const bad=res.filter(r=>!r.ok||r.tries>1);
+  if(bad.length){t+="\nCÁC CÂU CẦN XEM LẠI:\n";bad.forEach(r=>{const it=BY[r.id];t+=`- ${it.q.replace(/_{3,}/g,"____")}\n  Em trả lời: ${r.val||"(bỏ trống)"}${r.ok?" (đúng ở lần 2)":""}\n  Đáp án: ${it.ans}\n`})}
+  else t+="\nLàm đúng tất cả ngay lần đầu.\n";
+  return t;
+}
+function mailto(subj,body){ if(body.length>1600) body=body.slice(0,1600)+"\n…(xem đầy đủ trong phần kết quả đã sao chép)";
+  return `mailto:${TEACHER}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`}
+function copyText(txt,msgEl){
+  const done=()=>{msgEl.textContent="Đã sao chép. Em dán vào Zalo hoặc email gửi cô nhé."};
+  const fallback=()=>{const ta=$("resText");ta.value=txt;ta.focus();ta.select();try{document.execCommand("copy")?done():msgEl.textContent="Em bấm giữ vào ô bên dưới để chọn và sao chép."}catch(e){msgEl.textContent="Em bấm giữ vào ô bên dưới để chọn và sao chép."}};
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done,fallback); else fallback();
+}
+$("btnCopy").onclick=()=>copyText($("resText").value,$("copyMsg"));
+$("btnBack").onclick=goMap;
+$("btnAllReport").onclick=()=>{
+  let t=`BẢNG ĐIỂM LUYỆN TỰ LUẬN TIẾNG ANH 11 – GIỮA KỲ I\nHọc sinh: ${profile.name}\nLớp: ${profile.cls}\n\n`;
+  ROUNDS.forEach((r,i)=>{t+=`${r.challenge?"Thử thách":"Bài "+(i+1)}. ${r.t}: ${best[r.id]==null?"chưa làm":fmtGrade(best[r.id])+"/10"}\n`});
+  const a=document.createElement("a"); a.href=mailto(`[Anh 11 – Tự luận GK1] Bảng điểm ${profile.name} – ${profile.cls}`,t); a.target="_blank"; a.rel="noopener";
+  document.body.appendChild(a); a.click(); a.remove();
+};
+
+// ---------- theme ----------
+$("btnTheme").onclick=()=>{const r=document.documentElement;const cur=r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+  r.dataset.theme=cur==="dark"?"light":"dark";store.set("theme",r.dataset.theme)};
+(()=>{const th=store.get("theme",null);if(th)document.documentElement.dataset.theme=th;})();
+
+// ---------- boot ----------
+if(profile){ const r=ROUNDS.find(x=>"#"+x.id===location.hash); r?startRound(r):goMap(); }
+</script>
+</body>
+</html>
